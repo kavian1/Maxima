@@ -364,7 +364,11 @@
       </header>
 
       <!-- Welcome-->
-      <section style="padding-top: 0">
+      <section style="
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+      position: relative;">
         <div>
           <video
             notranslate
@@ -373,7 +377,12 @@
             muted
             playsinline
             class="slide-video"
-            style="margin-top: -100px"
+            style="    
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Hace que el video llene el contenedor sin mantener proporción */
+            position: absolute;
+            top: 0; /* Ajusta si necesitas mover el video hacia arriba */"
           >
             <source
               src="https://d17wmwjckt0fmo.cloudfront.net/videos/MaximaAbonos/videofabricarecortado.mov"
@@ -384,7 +393,7 @@
       </section>
 
       <!-- Who we are-->
-      <section class="section-top-65 section-md-top-105" id="about">
+      <section class="section-top-80" id="about">
         <div class="container">
           <h3>
             <span data-translate="about_title1"
@@ -458,80 +467,34 @@
               >productos</span
             >
           </h3>
+          <div class="row row-30 justify-content-sm-center text-md-start">
 
-          <div class="row">
             <!-- Spritesheet 1 -->
-            <div class="col-md-6 col-lg-4">
-              <div
-                class="sprite-container"
-                style="height: 200px; overflow: hidden; width: 50%"
-              >
-                <div
-                  class="sprite"
-                  data-index="0"
-                  style="
-                    width: 200px;
-                    height: 200px;
-                    background-image: url('images/spritesheet_aonk.png');
-                    background-size: 24000px 200px;
-                  "
-                ></div>
-                <div class="caption">
-                  <h6 class="text-transform-none">
-                    <a class="text-dark" href="#">AON NK</a>
-                  </h6>
-                </div>
+            <div class="col-md-12 col-xl-4">
+              <div class="sprite-container" style="height: 400px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                <div class="sprite" data-index="0" style="width: 400px; height: 400px; background-image: url('images/spritesheet_orgaonk.png'); background-size: 48000px 400px;"></div>
+
               </div>
             </div>
-
+      
             <!-- Spritesheet 2 -->
-            <div class="col-md-6 col-lg-4">
-              <div
-                class="sprite-container"
-                style="height: 200px; overflow: hidden; width: 50%"
-              >
-                <div
-                  class="sprite"
-                  data-index="1"
-                  style="
-                    width: 200px;
-                    height: 200px;
-                    background-image: url('images/spritesheet_orgaonk.png');
-                    background-size: 24000px 200px;
-                  "
-                ></div>
-                <div class="caption">
-                  <h6 class="text-transform-none">
-                    <a class="text-dark" href="#">ORGA ON</a>
-                  </h6>
-                </div>
-              </div>
-            </div>
+            <div class="col-md-12 col-xl-4">
+              <div class="sprite-container" style="height: 400px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                <div class="sprite" data-index="1" style="width: 400px; height: 400px; background-image: url('images/spritesheet_orgaonk.png'); background-size: 48000px 400px;"></div>
 
-            <!-- Spritesheet 3 -->
-            <div class="col-md-6 col-lg-4">
-              <div
-                class="sprite-container"
-                style="height: 200px; overflow: hidden; width: 50%"
-              >
-                <div
-                  class="sprite"
-                  data-index="2"
-                  style="
-                    width: 200px;
-                    height: 200px;
-                    background-image: url('images/spritesheet_molplus.png');
-                    background-size: 24000px 200px;
-                  "
-                ></div>
-                <div class="caption">
-                  <h6 class="text-transform-none">
-                    <a class="text-dark" href="#">MOL PLUS</a>
-                  </h6>
-                </div>
               </div>
             </div>
+      
+            <!-- Spritesheet 3 -->
+            <div class="col-md-12 col-xl-4">
+              <div class="sprite-container" style="height: 400px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                <div class="sprite" data-index="2" style="width: 400px; height: 400px; background-image: url('images/spritesheet_orgaonk.png'); background-size: 48000px 400px;"></div>
+
+              </div>
+            </div>
+      
           </div>
+      
 
           <div class="offset-top-40 offset-md-top-60">
             <a
