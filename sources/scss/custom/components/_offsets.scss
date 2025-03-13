@@ -1,0 +1,58 @@
+//
+// Offsets
+// --------------------------------------------------
+
+
+// Insets
+// -------------------------
+
+$insets: (0, 10px, 15px, 20px, 25px, 30px, 38px, 50px, 60px, 70px, 100px, 110px, 220px);
+
+html .page {
+	@include indent-responsive(inset, left, padding-left, $medias, $insets);
+	@include indent-responsive(inset, right, padding-right, $medias, $insets);
+}
+
+
+// Elements
+// -------------------------
+
+h2 + p {
+	margin-top: 15px;
+}
+
+h2 + .h6 {
+	margin-top: 15px;
+}
+
+h6 + p {
+	margin-top: 10px;
+}
+
+
+// Grid
+// -------------------------
+
+.container-fluid-custom {
+	@include media-breakpoint-up(xl) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// Sections
+// -------------------------
+
+
+// Responsive
+// -------------------------
+
+$offsets: (-10px, -5px, -3px, 0, 3px, 5px, 8px, 9px, 10px, 12px, 15px, 17px, 20px, 22px, 25px, 26px, 27px, 30px, 35px, 40px, 45px, 47px, 50px, 55px, 60px, 65px, 70px, 85px, 90px, 100px, 110px, 114px, 133px, 140px, 147px);
+
+html .page {
+	@include indent-responsive(offset, top, margin-top, $medias, $offsets);
+}
+
+* + .row {
+	margin-top: 50px;
+}

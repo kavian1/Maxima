@@ -1,0 +1,272 @@
+//
+// Custom Thumbnails
+// --------------------------------------------------
+
+.thumbnail {
+	padding: 0;
+	margin: 0;
+	border: none;
+	border-radius: 0;
+
+	.caption {
+		padding: 0;
+		color: $black;
+	}
+}
+
+.img-thumbnail,
+.thumbnail {
+	box-shadow: none;
+}
+
+.image-thumbnail {
+	max-width: 570px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+
+	img {
+		border-radius: 10px;
+	}
+
+	.caption {
+		padding: 20px;
+	}
+
+	@include media-breakpoint-up(md) {
+		* {
+			color: $white;
+		}
+		&:before {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			content: "";
+			display: inline-block;
+			background-image: linear-gradient(to bottom, transparent 30%, #000 110%);
+		}
+		.caption {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+			text-align: left;
+
+			p {
+				line-height: 21px;
+			}
+
+			h5 + p {
+				margin-top: 12px;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.caption {
+			padding: 20px 35px;
+		}
+	}
+}
+
+// Make thumbnails to fit entire container width
+.thumbnail-block {
+	display: block;
+
+	> img,
+	a > img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.thumbnail-features {
+	max-width: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	transition: 350ms;
+
+	h6 {
+		line-height: 30px;
+	}
+
+	span.icon {
+		position: relative;
+		max-height: 62px;
+
+		&:before,
+		&:after {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			content: "";
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: $gray-lightest;
+		}
+
+		&:before {
+			left: -24px;
+		}
+
+		&:after {
+			right: -24px;
+		}
+	}
+
+	.unit-body {
+		position: relative;
+	}
+
+	@include media-breakpoint-up(lg) {
+		height: 157px;
+		overflow: hidden;
+		.btn {
+			opacity: 0;
+			min-width: 100px;
+		}
+		&:hover {
+			margin-top: -33px;
+			margin-bottom: -33px;
+			height: 220px;
+
+			.btn {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.thumbnail-features-variant-2 {
+	max-width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+	transition: 350ms;
+
+	span.icon {
+		position: relative;
+		max-height: 62px;
+
+		&:before,
+		&:after {
+			content: none;
+		}
+	}
+
+	h6 {
+		line-height: 30px;
+	}
+
+	.unit-body {
+		position: relative;
+	}
+
+	.btn-white-transparent {
+		@include button-variant-custom($primary, transparent, $primary, $white, $primary, $primary);
+	}
+
+
+	@include media-breakpoint-up(xl) {
+		height: 220px;
+		&:before {
+			position: absolute;
+			top: -122px;
+			bottom: -100px;
+			left: 0;
+			right: 0;
+			content: "";
+			display: inline-block;
+			@include gradient-directional(#5dd39e, #5dd2d3, 45deg);
+			opacity: 0;
+			transition: 350ms;
+		}
+		.btn-white-transparent {
+			@include button-variant-custom($white, transparent, $white, $primary, $white, $white);
+		}
+		.btn {
+			opacity: 0;
+		}
+		h6,
+		p {
+			transition: 350ms;
+		}
+		&:hover {
+			margin-top: -40px;
+			margin-bottom: -40px;
+			height: 290px;
+
+			h6,
+			p {
+				color: $white;
+			}
+
+			.btn {
+				opacity: 1;
+			}
+
+			.icon-primary-fill {
+				fill: $white;
+			}
+
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+// thumbnail classic
+//-------------------------------------------------
+
+.thumbnail-classic {
+	border-radius: $border-radius-small;
+	position: relative;
+	overflow: hidden;
+	box-shadow: $shadow-area-md;
+
+	.caption {
+		padding: 20px 15px;
+
+		p {
+			line-height: 21px;
+		}
+	}
+
+	.meta-bottom {
+		font-size: 12px;
+		color: $gray-lighter;
+	}
+
+	.tag {
+		position: absolute;
+		top: 14px;
+		left: 14px;
+	}
+
+
+	@include media-breakpoint-up(md) {
+		.caption {
+			padding: 30px 32px;
+		}
+	}
+}
+
+// thumbnail-img
+//---------------------------------------------------
+
+.thumbnail-img {
+	border-radius: $border-radius-small;
+	position: relative;
+	overflow: hidden;
+	box-shadow: $shadow-area-md;
+
+	.caption {
+		padding: 15px 38px;
+	}
+}

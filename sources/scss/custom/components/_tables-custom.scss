@@ -1,0 +1,197 @@
+//
+// Custom Tables
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+// Bootstrap
+// -------------------------
+
+//.table {
+//  text-align: left;
+//  tr:first-child {
+//    td {
+//      font-weight: 700;
+//    }
+//  }
+//
+//  th tbody, td tbody {
+//    padding: 7px 18px;
+//  }
+//
+//  @include media-breakpoint-up(lg) {
+//    th, td {
+//      &:nth-child(n+2) {
+//        padding-left: 56px;
+//      }
+//    }
+//  }
+//}
+
+// Table Custom
+// -------------------------
+
+.table-custom-variant-2 {
+  text-align: left;
+  th {
+    letter-spacing: 0;
+    color: $black;
+    font-weight: 700;
+  }
+  tbody {
+    tr {
+      border: 1px solid $gray-light;
+      border-left: none;
+      border-right: none;
+      &:first-child {
+        border: 1px solid #f9f9f9;
+      }
+      td, th {
+        border: none;
+        vertical-align: middle;
+        padding: 13px 10px;
+      }
+      td{
+        padding: 4px 10px;
+      }
+    }
+    @include media-breakpoint-up(sm) {
+
+      td{
+        padding: 4px 23px;
+      }
+    }
+  }
+
+
+  &.table-fixed {
+    table-layout: fixed;
+    th tbody, td tbody {
+      padding: 0;
+    }
+    @include media-breakpoint-up(lg) {
+      th, td {
+        &:nth-child(n+2) {
+          padding-left: 0;
+        }
+        padding: 13px 23px;
+      }
+    }
+  }
+  &.table-hover-rows,
+  &.striped-table,
+  &.condensed-table,
+  &.bordered-table {
+    tbody {
+      tr {
+        &:hover {
+          background: $gray-light;
+        }
+        &:first-child {
+          border: none;
+          border-bottom: 1px solid #cecece;
+        }
+      }
+    }
+  }
+  &.striped-table,
+  &.condensed-table,
+  &.bordered-table {
+    tbody {
+      tr {
+        &:hover {
+          background: none;
+        }
+        &:nth-child(even) {
+          background: $gray-lightest;
+        }
+      }
+    }
+  }
+  &.condensed-table {
+    @include media-breakpoint-up(lg) {
+      th, td {
+        padding: 9px 23px;
+      }
+    }
+  }
+  &.bordered-table {
+    tbody {
+      tr {
+        border: 1px solid $gray-light;
+        td, th {
+          border: 1px solid $gray-light;
+        }
+        th {
+          border-bottom: none;
+        }
+        &:nth-child(n+2) {
+          td {
+            border-top: none;
+          }
+        }
+        &:nth-child(even) {
+          background: none;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        th, td {
+          &:nth-child(n+2) {
+            padding-left: 20px;
+          }
+          padding: 9px 20px;
+        }
+      }
+    }
+  }
+  &.table-primary {
+    tbody {
+      tr {
+        border: none;
+        &:nth-child(odd) {
+          background: $gray-lightest;
+        }
+        th {
+          background: $primary;
+          color: $white;
+          border-top-color: $primary;
+        }
+        &:first-child {
+          border: 1px solid $primary;
+        }
+      }
+    }
+  }
+  &.table-dark-blue {
+    tbody {
+      tr {
+        &:hover {
+          background: $gray-light;
+          .stepper {
+            .form-input {
+              background-color: $gray-light;
+            }
+          }
+        }
+        th {
+          background: $gray-dark;
+          color: $white;
+          border-top-color: $gray-dark;
+        }
+        &:first-child {
+          border: 1px solid $gray-dark;
+        }
+      }
+    }
+  }
+  &.table-product{
+    tbody tr:first-child{
+      border-bottom: 1px solid $gray-light;
+      td{
+        font-weight: 400;
+      }
+    }
+  }
+}

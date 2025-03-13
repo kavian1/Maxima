@@ -1,0 +1,5 @@
+mixin thumbnail-img(src, img_class,title)
+  .thumbnail-img
+    +jpg(src,img_class)
+    .caption
+      h6.text-transform-none: a(href='#').text-dark=title

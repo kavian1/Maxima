@@ -1,0 +1,382 @@
+extends  ../_skeleton
+
+include ../elements/_ui-rd-parallax
+include ../elements/_ui-thumbnail-img
+include ../elements/_ui-blockquote-variant-3
+
+block variables
+	- var activeIndex = 1
+
+block title
+	title Home
+
+block page
+	// Page Header
+	include ../elements/_header-transparent
+	='\n'
+	
+	// Welcome
+	section
+		// Swiper
+		.swiper-container.swiper-slider(data-autoplay='3000')
+			.swiper-wrapper
+				.swiper-slide(data-slide-bg='images/slide-03.jpg' style="background-position: 80% center")
+					.swiper-slide-caption
+				
+				.swiper-slide(data-slide-bg='images/slide-02.jpg' style="background-position: 80% center")
+					.swiper-slide-caption
+				
+				.swiper-slide(data-slide-bg='images/slide-01.jpg' style="background-position: 80% center")
+					.swiper-slide-caption
+			.jumbotron-custom
+				.container
+					.row.justify-content-sm-center.justify-content-xl-between.align-items-lg-center
+						.col-lg-6.text-start.col-sm-10
+							div
+								h1
+									span.text-primary.view-animate.fadeInUp.delay-08.duration-1.animated Eco
+									span.text-white.view-animate.fadeInDown.delay-08.duration-1.animated Tech Solar panels
+							.offset-top-20.view-animate.fadeInUpSmall.delay-16.duration-1
+								p.h6.text-white.font-default.text-light.text-transform-none(style='max-width: 480px;')   Solar panels are perfect if you are looking for a reliable source of additional power and energy for your home or office.
+							.offset-top-20.offset-lg-top-50.view-animate.zoomInSmall.delay-2.duration-1
+								a(href="#").btn.btn-primary Find Out More
+						.col-lg-6.col-xl-5.d-none.d-lg-block
+							.bg-default.section-form-slider
+								h5 Get a pricing quote for a residential or business solar panel installation
+								// RD Mailform
+								form.rd-mailform.text-center.offset-top-30(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+									.form-wrap
+										label.form-label(for="contact-name1") Your Name
+										input#contact-name1.form-input(type="text" name="name" data-constraints='@Required')
+									.form-wrap
+										label.form-label(for="contact-email1") Email
+										input#contact-email1.form-input(type="email" name="email" data-constraints="@Email @Required")
+									.form-wrap
+										label.form-label(for="contact-phone1") Phone
+										input#contact-phone1.form-input(type="text" name="phone" data-constraints="@Numeric @Required")
+									.form-wrap
+										//Select 2
+										select.form-input.select-filter(name="commercial-system", data-placeholder="Do you need a residential or commercial system?", data-minimum-results-search="Infinity", data-constraints="@Required")
+											option Do you need a residential or commercial system?
+											option(value="1") Residential system
+											option(value="2") Commercial system
+									
+									.form-wrap
+										//Select 2
+										select.form-input.select-filter(name="electricity-bill", data-placeholder="What is your average electricity bill?", data-minimum-results-search="Infinity", data-constraints="@Required")
+											option What is your average electricity bill?
+											option(value="1") 100
+											option(value="2") 200
+											option(value="3") 300
+									
+									button(type="submit").btn.btn-primary.offset-top-30 GET A QUOTE
+
+			// Swiper Pagination
+			.swiper-pagination
+	='\n'
+	
+	// Who we are
+	section.section-top-65.section-md-top-105#about
+		.container
+			h3 Who We Are
+			p.font-size-12 Team of alternative energy specialists
+			hr.hr.offset-top-45
+			.row.justify-content-sm-center.offset-top-40
+				.col-md-11
+					p.h6.font-default.text-transform-none.text-base Our company is an end-to-end, customer oriented alternative energy company that is centered on marketing, trading, transportation, and distribution of solar panels in the US and around the world... Firstly, we’re an environmentally friendly renewable energy company offering a broad portfolio of technologies, products & solutions to our clients globally!
+		.container-fluid.container-fluid-custom.offset-top-60.offset-md-top-110
+			.row.g-0.gallery-grid
+				.col-md-4
+					+jpg('about-01-639x480','img-responsive img-fullwidth')
+				.col-md-4
+					+jpg('about-02-639x480','img-responsive img-fullwidth')
+				.col-md-4
+					+jpg('about-03-639x480','img-responsive img-fullwidth')
+	='\n'
+	
+	// Features
+	section.section-60.section-md-90#advantages
+		.container
+			h3.view-animate.fadeInUpSmall
+				span.text-primary advantages &nbsp;
+				span you get from
+				br.visible-lg-inline
+				span ordering at eco tech
+			.row.row-60.justify-content-sm-center.text-sm-start.offset-top-40.offset-top-65
+				.col-md-6.col-lg-4.view-animate.fadeInLeftSm.delay-04.duration-1
+					.unit.unit-spacing-sm.flex-column.flex-sm-row
+						.unit-left
+							span.icon
+								include ../sections/icons/_icon-1
+						.unit-body
+							h6 Calculate your Savings
+							p.font-size-12.offset-top-10 With our savings calculator, you can make a right decision on installation of solar panels  manufactured by Eco Tech.
+				
+				.col-md-6.col-lg-4.view-animate.fadeInLeftSm.delay-06.duration-1
+					.unit.unit-spacing-sm.flex-column.flex-sm-row
+						.unit-left
+							span.icon
+								include ../sections/icons/_icon-2
+						.unit-body
+							h6 Installation: How it Works?
+							p.font-size-12.offset-top-10 Learn more about all aspects of the solar panel installation process from our experts and get answers to questions you have.
+				
+				.col-md-6.col-lg-4.view-animate.fadeInLeftSm.delay-08.duration-1
+					.unit.unit-spacing-sm.flex-column.flex-sm-row
+						.unit-left
+							span.icon
+								include ../sections/icons/_icon-3
+						.unit-body
+							h6 Our Warranty Policy
+							p.font-size-12.offset-top-10 Our panels and other renewable energy products come with a warranty that protects you against any possible failures of the product.
+				
+				.col-md-6.col-lg-4.view-animate.fadeInRightSm.delay-08.duration-1
+					.unit.unit-spacing-sm.flex-column.flex-sm-row
+						.unit-left
+							span.icon
+								include ../sections/icons/_icon-4
+						.unit-body
+							h6 Additional Power for your needs
+							p.font-size-12.offset-top-10 Solar panels are perfect if you are looking for a reliable source of additional power and energy for your home or office.
+				
+				.col-md-6.col-lg-4.view-animate.fadeInRightSm.delay-06.duration-1
+					.unit.unit-spacing-sm.flex-column.flex-sm-row
+						.unit-left
+							span.icon
+								include ../sections/icons/_icon-1
+						.unit-body
+							h6 reliable energy source
+							p.font-size-12.offset-top-10 Solar energy is one of the most reliable energy sources available today. You can also store extra energy for future consumption.
+				
+				.col-md-6.col-lg-4.view-animate.fadeInRightSm.delay-04.duration-1
+					.unit.unit-spacing-sm.flex-column.flex-sm-row
+						.unit-left
+							span.icon
+								include ../sections/icons/_icon-2
+						.unit-body
+							h6 24/7 customer support
+							p.font-size-12.offset-top-10 Our company offers free 24/7 support to all our clients who have any questions or issues with the products and services of Eco Tech.
+	='\n'
+	
+	section
+		+rd-parallax({
+			"src": "images/parallax-04.jpg"
+		})
+			.container.section-75.section-md-top-135.section-md-bottom-183.text-center
+				.row.justify-content-sm-center.align-items-md-center
+					.col-md-6.col-xl-5
+						h2.text-white
+							span Why &nbsp;
+							span.text-primary Eco
+							span Tech?
+						p.h6.font-default.text-transform-none.text-light.text-white.offset-top-35 After years of experience and more than 500, 000 people powered with the help of our solar panels, we think the choice is really obvious here!
+						a(href='#').btn.btn-primary-transparent.text-white.offset-top-35.offset-sm-top-65 Read more about us
+	='\n'
+	
+	// products
+	section.section-60.section-md-90#products
+		.container
+			h3
+				span Our &nbsp;
+				span.text-primary products
+			.row.row-30.justify-content-sm-center.text-md-start
+				.col-md-6.col-lg-4
+					+thumbnail-img(
+						'product-01-370x300',
+						'img-responsive img-fullwidth',
+						'NeON 2 315W'
+					)
+				.col-md-6.col-lg-4
+					+thumbnail-img(
+						'product-02-370x300',
+						'img-responsive img-fullwidth',
+						'SolarWorld SW 270 Black'
+					)
+				.col-md-6.col-lg-4
+					+thumbnail-img(
+						'product-03-370x300',
+						'img-responsive img-fullwidth',
+						'EcoGreen 5W 12V Solar Panel'
+					)
+			.offset-top-40.offset-md-top-60
+				a(href='#').btn.btn-primary view all products
+	='\n'
+	
+	.container
+		hr.hr
+	='\n'
+	
+	section.section-65.section-md-bottom-80#testimonials
+		.container
+			.row.justify-content-sm-center
+				.col-md-10.col-lg-8
+					h3
+						span Our customers enjoy the sunny side
+						br.visible-lg-inline
+						span of their &nbsp;
+						span.text-primary.wow.fadeInUp.duration-1(data-wow-delay=".4s") energy consumption
+						span &nbsp; bills.
+					hr.divider.divider-sm
+			
+			.row.row-30.justify-content-sm-center.offset-top-60.offset-md-top-100
+				.col-md-6.col-lg-4.view-animate.fadeInLeftSm.delay-06
+					+quote-3(
+						"home-03-70x70",
+						"rounded-circle",
+						"Markus Breitbart",
+						"Freelance  Photographer",
+						"",
+						"I have a pretty big house that consumes a sizable amount of energy each month. With the help of these solar panels, I’ve been able to make great cuts to my monthly bills!"
+					)
+				.col-md-6.col-lg-4.view-animate.fadeInLeftSm.delay-08
+					+quote-3(
+						"home-04-70x70",
+						"rounded-circle",
+						"Thomas Johnson",
+						"CEO at ",
+						"BigInfoDev",
+						"Installing a solar panel atop of our office building was a great decision! We’ve managed to cover all our office needs (which houses 50 computers). "
+					)
+				.col-md-6.col-lg-4.view-animate.fadeInLeftSm.delay-1
+					+quote-3(
+						"home-05-70x70",
+						"rounded-circle",
+						"Jane Nicholson",
+						"Web Designer",
+						"",
+						"Everyone I dealt with at the Eco Tech company, from a salesperson and office staff to the installation crew has been incredibly helpful and enthusiastic."
+					)
+	='\n'
+	
+	//quote
+	section
+		+rd-parallax({
+			"src": "images/parallax-01.jpg",
+		})
+			.container.section-75.section-md-bottom-105
+				.row.justify-content-sm-center
+					.col-md-10
+						.jumbotron-custom-variant-1
+							h3.text-white Our coverage is the best in the industry, with repairs and production guarantee at no additional charge
+						a(href='#').btn.btn-primary.offset-top-35 GET A QUOTE
+	='\n'
+	
+	// more info
+	section.section-65.section-md-bottom-90#news
+		.container
+			h3
+				span.wow.fadeInUp.duration-1 More &nbsp;
+				span.text-primary.wow.fadeInDown.duration-1 Useful
+				span.wow.fadeInUp.duration-1 &nbsp; Info
+		// Slick Carousel
+		.slick-slider.carousel-center-mode.offset-sm-top-25(data-arrows="true", data-loop="true", data-dots="false", data-swipe="false",data-autoplay='true' data-items="1" data-xl-items="3" data-center-mode='true' data-center-padding='0.50')
+			.item
+				.image-thumbnail
+					+jpg('carousel-01-570x380','img-responsive')
+					.caption
+						h5: a(href='#') Will solar panels look good on my roof?
+						p Absolutely! Our set of contemporary designed, low-profile and premium front trim panels will integrate beautifully into your home's or office building's exterior, adding a stylish touch of futurism to it....
+			.item
+				.image-thumbnail
+					+jpg('carousel-02-570x380','img-responsive')
+					.caption
+						h5: a(href='#') How does solar power work?
+						p In short, our panels absorb the sun’s energy, then channelling it through discreetly placed wires to an inverter. There it is being converted to electricity which eventually powers your home or office...
+			.item
+				.image-thumbnail
+					+jpg('carousel-01-570x380','img-responsive')
+					.caption
+						h5: a(href='#') Will solar panels look good on my roof?
+						p Absolutely! Our set of contemporary designed, low-profile and premium front trim panels will integrate beautifully into your home's or office building's exterior, adding a stylish touch of futurism to it....
+			.item
+				.image-thumbnail
+					+jpg('carousel-03-570x380','img-responsive')
+					.caption
+						h5: a(href='#') What is solar power and how is it used?
+						p Solar power is the conversion of sunlight into electricity, either directly using photovoltaics (PV), or indirectly using concentrated solar power. It may serve as an additional source of energy.
+	='\n'
+	
+	// support
+	section
+		+rd-parallax({
+			"src": "images/parallax-05.jpg"
+		})
+			.container.section-75.section-md-90.text-md-start
+				.row.justify-content-sm-center.justify-content-xl-between.align-items-md-center
+					.col-md-6.col-xl-5
+						img.img-responsive(src='images/home-07-466x459.png' width=466 height=459 alt='')
+					.col-md-6.col-xl-5
+						h3.text-white We're dedicated to providing free support
+						p.h6.font-default.text-transform-none.text-light.text-white.offset-top-35 Just after we'll put the solar panels up on your roof, you can count on our free customer support!
+						a(href='#').btn.btn-primary.btn-shadow.offset-top-35.offset-sm-top-65 GET A QUOTE
+	='\n'
+	
+	// contacts
+	section.section-top-75.section-md-top-135#contacts
+		.container
+			h3 Contact Us
+			hr.hr.offset-top-35
+			.row.row-50.justify-content-sm-center.offset-top-0.features-list-variant-2.section-top-70.section-bottom-80
+				.col-sm-8.col-md-10.col-xl-6.text-md-start.row-30
+					div: .unit.unit-spacing-sm.flex-column.flex-md-row
+						.unit-left
+							+jpg('home-08-270x180','img-responsive img-rounded img-fullwidth')
+						.unit-body
+							h6.offset-top-10.text-transform-none HQ Office (Boston, MA, USA)
+							p.text-regular.line-height-21.offset-top-8 8949 Kenamar Drive,  Suite 101 #[br.visible-lg-inline] Boston, MA 92121
+							dl.dl-horizontal-variant-1.offset-sm-top-25.text-md-start
+								dt.fw-bold.text-dark Phone:
+								dd
+									a(href='tel:#').text-base.text-regular 555-376-7872
+							dl.dl-horizontal-variant-1.text-md-start
+								dt.fw-bold.text-dark Fax:
+								dd
+									a(href='tel:#').text-base.text-regular 555-376-7873
+					
+					div: .unit.unit-spacing-sm.flex-column.flex-md-row
+						.unit-left
+							+jpg('home-09-270x180','img-responsive img-rounded img-fullwidth')
+						.unit-body
+							h6.offset-top-10.text-transform-none Toronto Office
+							p.text-regular.line-height-21.offset-top-8 2000 Finch Avenue West #[br.visible-lg-inline] Toronto, Ontario M3J 2V5
+							dl.dl-horizontal-variant-1.offset-sm-top-25.text-md-start
+								dt.fw-bold.text-dark Phone:
+								dd
+									a(href='tel:#').text-base.text-regular 555-376-7872
+							dl.dl-horizontal-variant-1.text-md-start
+								dt.fw-bold.text-dark Fax:
+								dd
+									a(href='tel:#').text-base.text-regular 555-376-7873
+				
+				.col-md-10.col-xl-6
+					.inset-lg-left-110
+						h5 Get a pricing quote for a residential or business solar panel installation
+						// RD Mailform
+						form.rd-mailform.text-center.offset-top-30(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+							.form-wrap
+								label.form-label(for="contact-name") Your Name
+								input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+							.form-wrap
+								label.form-label(for="contact-email") Email
+								input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+							.form-wrap
+								label.form-label(for="contact-phone") Phone
+								input#contact-phone.form-input(type="text" name="phone" data-constraints="@Numeric @Required")
+							.form-wrap
+								//Select 2
+								select.form-input.select-filter(name="commercial-system", data-placeholder="Do you need a residential or commercial system?", data-minimum-results-for-search="Infinity", data-constraints="@Required")
+									option Do you need a residential or commercial system?
+									option(value="1") Residential system
+									option(value="2") Commercial system
+							.form-wrap
+								//Select 2
+								select.form-input.select-filter(name="electricity-bill", data-placeholder="What is your average electricity bill?", data-minimum-results-for-search="Infinity", data-constraints="@Required")
+									option What is your average electricity bill?
+									option(value="1") 100
+									option(value="2") 200
+									option(value="3") 300
+							button(type="submit").btn.btn-primary.offset-top-30 GET A QUOTE
+	='\n'
+	
+	// Page Footer
+	include ../elements/_footer-center

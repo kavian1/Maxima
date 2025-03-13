@@ -1,0 +1,289 @@
+//
+// Custom Buttons Styles
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: .3s ease-out;
+	min-width: 200px;
+	border-radius: $border-radius-large;
+	border-width: 2px;
+	white-space: nowrap;
+
+	&:focus,
+	&:active,
+	&:active:focus {
+		outline: none;
+	}
+
+
+	&,
+	&:active,
+	&.active {
+		&:focus,
+		&.focus {
+			color: $primary;
+		}
+	}
+
+	&:hover,
+	&:focus,
+	&.focus {
+		color: $primary;
+	}
+
+	&:active,
+	&.active {
+		box-shadow: none;
+	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+
+	}
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+	@include button-variant-custom($gray-dark, $gray-lightest, $gray-lightest, $white, $primary, $primary);
+}
+
+.btn-primary {
+	@include button-variant-custom($white, $primary, $primary, $white, darken($primary, 15%), darken($primary, 15%));
+}
+
+.page {
+	.btn-primary-transparent {
+		@include button-variant-custom($primary, transparent, $primary, $white, $primary, $primary);
+
+		&.text-white {
+			color: $white;
+
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
+
+.btn-white-transparent {
+	@include button-variant-custom($white, transparent, $white, $primary, $white, $white);
+}
+
+.btn-transparent {
+	@include button-variant-custom($white, transparent, transparent, $primary, transparent, transparent);
+}
+
+.btn-facebook {
+	@include button-variant-custom($white, #8b9dc3, #8b9dc3, $white, darken(#8b9dc3, 15%), darken(#8b9dc3, 15%));
+
+	.icon {
+		background-color: $color-facebook;
+	}
+}
+
+.btn-twitter {
+	@include button-variant-custom($white, #aec9de, #aec9de, $white, darken(#aec9de, 15%), darken(#aec9de, 15%));
+
+	.icon {
+		background-color: $color-twitter;
+	}
+}
+
+.btn-linkedin {
+	@include button-variant-custom($white, #91b8cd, #91b8cd, $white, darken(#91b8cd, 15%), darken(#91b8cd, 15%));
+
+	.icon {
+		background-color: $color-linkedin;
+	}
+}
+
+.btn-google-plus {
+	@include button-variant-custom($white, #e7b9b3, #e7b9b3, $white, darken(#e7b9b3, 15%), darken(#e7b9b3, 15%));
+
+	.icon {
+		background-color: $color-google-plus;
+	}
+}
+
+// Success appears as green
+.btn-success {
+
+}
+
+// Info appears as blue-green
+.btn-info {
+
+}
+
+// Warning appears as orange
+.btn-warning {
+
+}
+
+// Danger and error appear as red
+.btn-danger {
+
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-xs {
+	padding: 5px 30px;
+	font-weight: 400;
+	font-size: 12px;
+	min-width: 50px;
+}
+
+.btn-xxs {
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: none;
+	min-width: 50px;
+
+	&.btn.btn-icon.btn-default .icon {
+		color: $black;
+		font-size: 20px;
+		padding-right: 0;
+	}
+
+	&.btn.btn-icon {
+		padding: 0 15px 0 11px;
+	}
+
+	&.btn-icon {
+		&.btn-default {
+			color: $black;
+
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
+
+.btn-sm {
+	font-size: 14px;
+	font-weight: 700;
+	padding: 7px 30px;
+}
+
+.btn-md {
+	font-size: 14px;
+	padding: 9px 30px 10px;
+}
+
+.btn-lg {
+	font-size: 18px;
+	padding: 15px 30px;
+}
+
+// Button Styles
+// --------------------------------------------------
+.btn-shadow {
+	box-shadow: $shadow-area-lg;
+}
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-rect {
+	border-radius: 0;
+}
+
+.btn-round {
+	border-radius: 12px;
+}
+
+.btn-rounded {
+	border-radius: 3px;
+}
+
+// Button Icon styles
+// --------------------------------------------------
+
+.btn {
+
+	&.btn-icon {
+		padding-left: 17px;
+		padding-right: 17px;
+
+		.icon {
+			font-size: 28px;
+			line-height: 28px;
+			vertical-align: middle;
+		}
+
+		&-left {
+			.icon {
+				float: left;
+				padding-right: 10px;
+			}
+		}
+
+		&-right {
+			.icon {
+				float: right;
+				padding-left: 10px;
+			}
+		}
+
+		&.btn-default {
+			&:focus,
+			&:active {
+				.icon {
+					color: $white;
+				}
+			}
+
+			.icon {
+				color: $primary;
+			}
+
+			&:hover {
+				.icon {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+
+// Footer btn
+//---------------------------------------------------
+
+.btn-subscribe-footer {
+	font-size: 16px;
+	color: #666;
+}
+
+.btn-share {
+	border-radius: $border-radius-small;
+	padding: 0 16px 0 0;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: none;
+	min-width: 50px;
+	border: none;
+	overflow: hidden;
+	line-height: 32px;
+
+	.icon {
+		float: left;
+		width: 32px;
+		height: 32px;
+		font-size: 16px;
+		margin-right: 16px;
+	}
+}

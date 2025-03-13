@@ -1,0 +1,62 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+
+// Page styles
+// --------------------------------------------------
+
+.page {
+  overflow: hidden;
+  background-color: $content-bg;
+}
+
+// Links
+
+a {
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+// Horizontal rules
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 1px solid $hr-border;
+}
+
+body{
+  font-weight: $font-weight-base;
+}
+
+.img-rounded {
+  border-radius: $border-radius-small;
+}
+
+.img-fullwidth {
+  width: 100%;
+}
+
+.page-footer {
+  .rd-navbar-brand {
+    .Rectangle_1,
+    .Rectangle_2{
+      fill: #333;
+    }
+    .logo-text-2 {
+      fill:$white;
+    }
+  }
+}

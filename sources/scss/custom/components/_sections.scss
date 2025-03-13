@@ -1,0 +1,70 @@
+//
+// Sections
+// --------------------------------------------------
+.section-relative {
+  position: relative;
+  z-index: 1;
+}
+
+.section-split {
+  @include media-breakpoint-up(xl) {
+    margin-left: auto;
+    margin-right: 0;
+    width: 50%;
+  }
+}
+
+.section-image-aside {
+  position: relative;
+  &-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50vw;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+}
+.section-image-aside-2{
+  &-img{
+    width: 50vw;
+  }
+}
+.section-post-news-modern {
+  .post-news-modern:last-child {
+    > .unit {
+      > .unit-right {
+        &:before {
+          height: calc(100% - 4px);
+        }
+      }
+    }
+  }
+}
+
+.section-image-aside-left {
+  .section-image-aside-img {
+    right: 100%;
+  }
+}
+
+.section-image-aside-right {
+  .section-image-aside-img {
+    left: 100%;
+  }
+}
+
+.section-form-slider {
+  border-radius: 6px;
+  padding: 40px 35px;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.2);
+}
+
+// Section Spacing
+// -------------------------
+
+$insets: (13px,15px,27px, 30px,60px,65px,70px,75px,80px,85px, 90px,105px,122px,125px,135px,170px,183px);
+
+@include indent-responsive(section, '', (padding-top, padding-bottom), $medias, $insets);
+@include indent-responsive(section, top, padding-top, $medias, $insets);
+@include indent-responsive(section, bottom, padding-bottom, $medias, $insets);

@@ -1,0 +1,31 @@
+// Post pages
+//-------------------------------------------
+
+.tag {
+  padding: 2px 20px 3px;
+  border-radius: $border-radius-small;
+  text-transform: none;
+  font-size: 14px;
+  min-width: 50px;
+}
+
+.meta-bottom {
+  li{
+    position: relative;
+    * + * {
+      margin-left: 5px;
+    }
+
+    & + li{
+      &:before{
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+        left: 0;
+        content: "";
+        display: inline-block;
+        border-left: 1px solid $gray-lightest;
+      }
+    }
+  }
+}

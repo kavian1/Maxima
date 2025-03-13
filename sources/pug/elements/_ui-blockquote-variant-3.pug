@@ -1,0 +1,15 @@
+mixin quote-3(src, img_class, name, job_1, job_2, quote)
+  blockquote.quote-3.text-start
+   .unit.flex-row.unit-spacing-sm.align-items-start
+     .unit-left
+       +jpg(src,img_class)
+     .unit-body
+       p
+         cite=name
+       p.fst-italictext-light.cite-job
+         span.text-lighter=job_1
+         span.text-primary= job_2
+
+       p.offset-top-8.line-height-21
+         q=quote
+

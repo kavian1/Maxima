@@ -1,0 +1,26 @@
+{
+  "en": {
+    "home": "Home",
+    "products": "Products",
+    "contact": "Contact",
+    "about_us": "About Us",
+    "nuestros": "Our",
+    "productos": "\u00A0products"
+  },
+  "es": {
+    "home": "Inicio",
+    "products": "Productos",
+    "contact": "Contacto",
+    "about_us": "Sobre Nosotros",
+    "nuestros": "Nuestros",
+    "productos": "\u00A0productos"
+  },
+  "fr": {
+    "home": "Accueil",
+    "products": "Produits",
+    "contact": "Contact",
+    "about_us": "À Propos de Nous",
+    "nuestros": "Nos",
+    "productos": "\u00A0produits"
+  }
+}

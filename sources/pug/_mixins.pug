@@ -1,0 +1,31 @@
+//- Img-set-dimensions
+//- Jpg image
+mixin jpg(name,class_img)
+  - var size = name.split('-').pop().split('x');
+  img(src='images/' + name + '.jpg', alt='', width=size[0], height=size[1], class=class_img)
+//- imgPath - path to image
+//- imgClass - class for image
+
+mixin img-set-dimensions(imgPath, imgClass)
+  -
+    var pos = 0,
+        imgWidth,
+        imgHeight,
+        defPos,
+        xPos,
+        dotPos;
+
+    while(true) {
+      var tpmPos = imgPath.indexOf("-", pos);
+      if(tpmPos == -1) break;
+      defPos = tpmPos;
+      pos = defPos + 1;
+    }
+
+    xPos = imgPath.indexOf('x');
+    dotPos = imgPath.indexOf('.');
+
+    imgWidth = imgPath.substring(defPos + 1, xPos);
+    imgHeight = imgPath.substring(xPos + 1, dotPos);
+
+  img(src= imgPath, width= imgWidth, height= imgHeight, alt="", class= imgClass)

@@ -1,0 +1,15 @@
+mixin thumbnail-classic(src, img_class,tag,title,text_body,time,views)
+  .thumbnail-classic.bg-default
+    +jpg(src,img_class)
+    a(href='post-default.html').tag.btn.btn-xs.btn-primary=tag
+    .caption
+      h6: a(href='post-default.html').text-dark=title
+      p.offset-top-10=text_body
+      .meta-bottom.offset-top-25
+        ul.list-inline.list-inline-md
+          li
+            span.icon.icon-xxs.mdi.mdi-calendar.text-middle.icon-gray
+            time.text-middle(datetime='2016')=time
+          li
+            span.text-middle.icon.icon-xxs.mdi.mdi-eye.icon-gray
+            span.text-middle=views

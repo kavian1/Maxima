@@ -1,0 +1,44 @@
+header.page-head.header-transparent#home
+	// RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar(
+			data-layout=                'rd-navbar-fixed',
+			data-sm-layout=             'rd-navbar-fixed',
+			data-md-layout=             'rd-navbar-fixed',
+			data-lg-layout=             'rd-navbar-fixed',
+			data-xl-layout=             'rd-navbar-static',
+			data-xxl-layout=            'rd-navbar-static',
+			
+			data-device-layout=         'rd-navbar-fixed',
+			data-sm-device-layout=      'rd-navbar-fixed',
+			data-md-device-layout=      'rd-navbar-fixed',
+			data-lg-device-layout=      'rd-navbar-fixed',
+			data-xl-device-layout=      'rd-navbar-static',
+			data-xxl-device-layout=     'rd-navbar-static',
+			
+			data-sm-stick-up-offset=    '50px',
+			data-lg-stick-up-offset=    '100px'
+		)
+			button.rd-navbar-collapse-toggle(data-rd-navbar-toggle=".rd-navbar-panel-inner" type="submit")
+				span
+			.bg-default
+				.rd-navbar-inner
+					// RD Navbar Panel
+					.rd-navbar-panel
+						// RD Navbar Toggle
+						button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+							span
+						// RD Navbar Brand
+						.rd-navbar-brand
+							a.brand-name(href='index.html')
+								img(src="images/logo.png", width="158", height="52", alt="").brand
+								img(src="images/logo-dark.png", width="158", height="52", alt="").stuck-brand
+					.rd-navbar-menu-panel
+						.rd-navbar-nav-wrap
+							ul.rd-navbar-nav
+								include _navigation
+					.rd-navbar-panel-inner
+						div
+							a(href='tel:#').btn.btn-transparent.btn-icon.btn-icon-left
+								span.icon.fa-phone.text-primary
+								span.text-middle 555-376-7872

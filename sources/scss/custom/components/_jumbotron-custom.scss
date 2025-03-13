@@ -1,0 +1,39 @@
+.jumbotron-custom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+
+  > .container {
+    width: 100%;
+  }
+
+  h1 {
+    overflow: hidden;
+    span{
+      display: inline-block;
+    }
+  }
+}
+
+.jumbotron-custom-variant-1 {
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+    border-style: solid;
+    border-width: 27px;
+    -moz-border-image: url(../images/border-image.png) 27 ;
+    -webkit-border-image: url(../images/border-image.png) 27 ;
+    -o-border-image: url(../images/border-image.png) 27 ;
+    border-image: url(../images/border-image.png) 27  ;
+  }
+}
+
+.jumbotron-custom-variant-2 {
+  padding: 50px 0;
+  border-top: 4px solid $white;
+  border-bottom: 4px solid $white;
+}
