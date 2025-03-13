@@ -11,6 +11,17 @@
 
 }
 
+@media (max-width: 768px) {
+  #quitar-imagen {
+	display:none;
+  }
+}
+
+@media (min-width: 768px) {
+	#quitar-imagen {
+	  display:block;
+	}
+  }
 
 /* ...existing code... */
 /**

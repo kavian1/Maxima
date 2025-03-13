@@ -1242,11 +1242,6 @@ progress {
 		flex: 0 0 auto;
 		width: 33.33333%;
 	}
-	/* universidad */
-	.col-md-4-uni {
-		flex: 0 0 auto;
-		width: 25%;
-	}
 	.col-md-5 {
 		flex: 0 0 auto;
 		width: 41.66667%;
