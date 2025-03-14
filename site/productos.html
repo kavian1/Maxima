@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Stylesheets-->
     <link
       rel="stylesheet"
@@ -19,7 +20,7 @@
     />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style_products.css" />
   </head>
   <body>
     <div class="preloader">
@@ -144,10 +145,10 @@
 
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <a class="brand-name" href="inicio.html">
+                    <a class="brand-name" href="index.html">
                       <img
                         class="brand"
-                        src="images/logocontexto.png"
+                        src="images/logocontextogris.png"
                         width="150"
                         height="52"
                         alt="Logo"
@@ -168,7 +169,7 @@
                     <ul class="rd-navbar-nav">
                       <!-- RD Navbar Nav-->
                       <li class="active">
-                        <a href="#home" data-translate="home">INICIO</a>
+                        <a href="index.html" data-translate="home">INICIO</a>
                       </li>
                       <li>
                         <a href="#products" data-translate="products"
@@ -372,145 +373,165 @@
               >productos</span
             >
           </h3>
-
-          <div class="row">
-            <!-- Spritesheet 1 -->
+          <div class="row row-30 justify-content-sm-center text-md-start">
+            <!-- Imagen 1 -->
             <div class="col-md-6 col-lg-4">
-              <div
-                class="sprite-container"
-                style="height: 200px; overflow: hidden; width: 50%"
-              >
-                <div
-                  class="sprite"
-                  data-index="0"
-                  style="
-                    width: 200px;
-                    height: 200px;
-                    background-image: url('images/spritesheet_aonk.png');
-                    background-size: 24000px 200px;
-                  "
-                ></div>
-                <div class="caption">
+              <div class="thumbnail-img" style="border: none; box-shadow: none">
+                <img
+                  class="img-responsive img-fullwidth"
+                  src="images/productos/aonk.png"
+                  alt="AON NK"
+                  width="370"
+                  height="300"
+                  style="border: none; box-shadow: none; padding: 0; margin: 0"
+                />
+                <div class="caption" style="background-color: #95c22b">
                   <h6 class="text-transform-none">
-                    <a class="text-dark" href="#">AON NK</a>
+                    <a class="text-white" href="#">AON NK</a>
                   </h6>
                 </div>
               </div>
             </div>
 
-            <!-- Spritesheet 2 -->
+            <!-- Imagen 2 -->
             <div class="col-md-6 col-lg-4">
-              <div
-                class="sprite-container"
-                style="height: 200px; overflow: hidden; width: 50%"
-              >
-                <div
-                  class="sprite"
-                  data-index="1"
-                  style="
-                    width: 200px;
-                    height: 200px;
-                    background-image: url('images/spritesheet_orgaonk.png');
-                    background-size: 24000px 200px;
-                  "
-                ></div>
-                <div class="caption">
+              <div class="thumbnail-img" style="border: none; box-shadow: none">
+                <img
+                  class="img-responsive img-fullwidth"
+                  src="images/productos/orgaonk.png"
+                  alt="ORGA ON"
+                  width="370"
+                  height="300"
+                  style="border: none; box-shadow: none; padding: 0; margin: 0"
+                />
+                <div class="caption" style="background-color: #95c22b">
                   <h6 class="text-transform-none">
-                    <a class="text-dark" href="#">ORGA ON</a>
+                    <a class="text-white" href="#">ORGA ON</a>
                   </h6>
                 </div>
               </div>
             </div>
 
-            <!-- Spritesheet 3 -->
+            <!-- Imagen 3 -->
             <div class="col-md-6 col-lg-4">
-              <div
-                class="sprite-container"
-                style="height: 200px; overflow: hidden; width: 50%"
-              >
-                <div
-                  class="sprite"
-                  data-index="2"
-                  style="
-                    width: 200px;
-                    height: 200px;
-                    background-image: url('images/spritesheet_molplus.png');
-                    background-size: 24000px 200px;
-                  "
-                ></div>
-                <div class="caption">
+              <div class="thumbnail-img" style="border: none; box-shadow: none">
+                <img
+                  class="img-responsive img-fullwidth"
+                  src="images/productos/molplus.png"
+                  alt="MOL PLUS"
+                  width="370"
+                  height="300"
+                  style="border: none; box-shadow: none; padding: 0; margin: 0"
+                />
+                <div class="caption"style="background-color: #95c22b">
                   <h6 class="text-transform-none">
-                    <a class="text-dark" href="#">MOL PLUS</a>
+                    <a class="text-white" href="#">MOL PLUS</a>
                   </h6>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="offset-top-40 offset-md-top-60">
-            <a
-              data-translate="all_products"
-              class="btn btn-primary"
-              href="productos.html"
-            >
-              Todos los productos
-            </a>
+            <!-- Imagen 1 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="thumbnail-img" style="border: none; box-shadow: none">
+                <img
+                  class="img-responsive img-fullwidth"
+                  src="images/productos/aonk.png"
+                  alt="AON NK"
+                  width="370"
+                  height="300"
+                  style="border: none; box-shadow: none; padding: 0; margin: 0"
+                />
+                <div class="caption" style="background-color: #95c22b">
+                  <h6 class="text-transform-none">
+                    <a class="text-white" href="#">AON NK</a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+
+            <!-- Imagen 2 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="thumbnail-img" style="border: none; box-shadow: none">
+                <img
+                  class="img-responsive img-fullwidth"
+                  src="images/productos/orgaonk.png"
+                  alt="ORGA ON"
+                  width="370"
+                  height="300"
+                  style="border: none; box-shadow: none; padding: 0; margin: 0"
+                />
+                <div class="caption" style="background-color: #95c22b">
+                  <h6 class="text-transform-none">
+                    <a class="text-white" href="#">ORGA ON</a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+
+            <!-- Imagen 3 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="thumbnail-img" style="border: none; box-shadow: none">
+                <img
+                  class="img-responsive img-fullwidth"
+                  src="images/productos/molplus.png"
+                  alt="MOL PLUS"
+                  width="370"
+                  height="300"
+                  style="border: none; box-shadow: none; padding: 0; margin: 0"
+                />
+                <div class="caption"style="background-color: #95c22b">
+                  <h6 class="text-transform-none">
+                    <a class="text-white" href="#">MOL PLUS</a>
+                  </h6>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Page Footer-->
       <footer
-        class="page-footer section-top-60 section-bottom-15 section-lg-top-85 text-center"
+        class="page-footer section-top-30 section-bottom-15 text-center"
         style="background-color: #131313"
         id="footer"
       >
-        <div class="container">
+        <div class="">
           <div class="row justify-content-center">
-            <div class="col-sm-12">
+            <div
+              class="col-sm-12  offset-md-top-80 offset-bottom-100 text-center"
+            >
               <div>
-                <div class="">
-                  <div class="unit-left">
-                    <img
-                      class="img-responsive img-rounded"
-                      src="images/logo.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="unit-body text-center">
-                    <h6 class="offset-top-10 text-transform-none">
-                      Máxima Abonos, S.L.
-                    </h6>
-                    <p class="text-regular line-height-21 offset-top-8">
-                      Paraje las Chozas de Redondo S.N.
-                      <br class="visible-lg-inline" />
-                      C.P. 04700 - El Ejido (Almería)
-                    </p>
-                    <br />
-                    <p>
-                      <a class="text-base text-regular" href="tel:+34950465150"
-                        >+34 950 46 51 50</a
-                      >
-                    </p>
-                    <p>
-                      <a
-                        class="text-base text-regular"
-                        href="mailto:info@maximaabonos.es"
-                        >info@maximaabonos.es</a
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <h6 class="text-transform-none text-white">
+                  Máxima Abonos, S.L.
+                </h6>
+                <p class="text-regular line-height-21">
+                  Paraje las Chozas de Redondo S.N.
+                  <br class="visible-lg-inline" />
+                  C.P. 04700 - El Ejido (Almería)
+                </p>
 
-            <div class="col-sm-12 offset-top-45 offset-md-top-85 text-center">
-              <p class="font-size-12 offset-top-20">
+                <br />
+
+                <p>
+                  <a class="text-base text-regular" href="tel:+34950465150"
+                    >+34 950 46 51 50</a
+                  >
+                </p>
+                <p>
+                  <a
+                    class="text-base text-regular"
+                    href="mailto:info@maximaabonos.es"
+                    >info@maximaabonos.es</a
+                  >
+                </p>
+              </div>
+              <p class="font-size-12">
                 <span>Copyright &#169;</span><span class="copyright-year"></span
                 ><span class="text-white"
                   >&nbsp; Máxima Abonos, S.L. &nbsp;</span
-                >Paraje las Chozas de Redondo S.N. C.P. 04700 - El Ejido
-                (Almería). Todos los derechos reservados. &nbsp;
+                >Todos los derechos reservados. &nbsp;<a data-translate="politic" target="_blank" href="https://clientes.prodat.es/privacidad/MLG/m%C3%A1ximaabonos" class="text-white">Política de privacidad</a>
               </p>
             </div>
           </div>
@@ -522,7 +543,8 @@
     <!-- Java script-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/rotar.js"></script>
     <script src="js/idioma.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
   </body>
 </html>
